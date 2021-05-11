@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\AuthController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +12,7 @@ use App\Http\Controllers\Auth\AuthController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/',[AuthController::class,'showLogin'])->name('showLogin');
 
-Route::post('login',[AuthController::class,'login'])->name('login');
+Route::get('/', function () {
+    return view('welcome');
+});
