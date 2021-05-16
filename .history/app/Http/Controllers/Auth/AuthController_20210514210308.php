@@ -45,15 +45,14 @@ class AuthController extends Controller
      */
     public function logout(Request $request)
     {
-        Auth::logout();
+    //     Auth::logout();
 
-        $request->session()->invalidate();
+    //     $request->session()->invalidate();
 
-        $request->session()->regenerateToken();
+    //     $request->session()->regenerateToken();
 
-        return redirect()->route('login.show')->with('logout','ログアウトしました！');
-
-        // echo 'test';
+    //     return redirect()->route('login.show')->with('logout','ログアウトしました！');
+        echo 'test';
 
     }
 

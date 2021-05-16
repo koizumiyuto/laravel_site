@@ -15,7 +15,7 @@ use App\Http\Controllers\Auth\AuthController;
 
 Route::group(['middleware' => ['guest']], function () {
     //ログインフォーム表示
-    Route::get('/', [AuthController::class, 'showLogin'])->name('login.show');
+    Route::get('/', [AuthController::class, 'showLogin'])->name('showLogin');
 
     //ログイン処理
     Route::post('login', [AuthController::class, 'login'])->name('login');

@@ -25,9 +25,11 @@
     </ul>
     @endforeach
 
-    <x-alert type="danger" :session="session('login_error')"/>  
-
-    <x-alert type="danger" :session="session('logout')"/>    
+    @if (session('login_error'))
+    <div class="alert alert-danger">
+      {{ session('login_error') }}
+    </div>
+    @endif
 
     <label for="inputEmail" class="sr-only">Email address</label>
 

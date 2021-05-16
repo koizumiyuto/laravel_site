@@ -29,7 +29,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->route('home')->with('login_success', 'ログイン成功しました！');
+            return redirect('home')->with('login_success', 'ログイン成功しました！');
         }
 
         return back()->withErrors([
@@ -51,10 +51,6 @@ class AuthController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect()->route('login.show')->with('logout','ログアウトしました！');
-
-        // echo 'test';
-
+        return redirect()->route('login.show');
     }
-
 }
