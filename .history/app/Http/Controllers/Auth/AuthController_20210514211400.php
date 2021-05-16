@@ -32,7 +32,7 @@ class AuthController extends Controller
             return redirect()->route('home')->with('login_success', 'ログイン成功しました！');
         }
 
-        return back()->withErrors([
+        return　back()->withErrors([
             'login_error' => 'メールアドレスかパスワードが間違っています。',
         ]);
     }
